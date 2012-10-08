@@ -96,3 +96,7 @@ modules/wifi/bcm40181/open-src/src/dhd/linux/dhd-cdc-sdmmc-gpl-*
 
 # mali
 drivers/gpu/mali/mali/__malidrv_build_info.c
+
+log.txt
+boot-repack
+comet.sh

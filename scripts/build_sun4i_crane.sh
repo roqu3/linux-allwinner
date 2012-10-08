@@ -9,7 +9,7 @@ set -e
 
 #Setup common variables
 export ARCH=arm
-export CROSS_COMPILE=arm-linux-gnueabi-
+export CROSS_COMPILE=/home/roq/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin/arm-none-eabi-
 export AS=${CROSS_COMPILE}as
 export LD=${CROSS_COMPILE}ld
 export CC=${CROSS_COMPILE}gcc
@@ -100,7 +100,7 @@ build_modules()
 	(
 	export LANG=en_US.UTF-8
 	unset LANGUAGE
-	make -C modules/mali LICHEE_MOD_DIR=${LICHEE_MOD_DIR} LICHEE_KDIR=${LICHEE_KDIR} \
+#	make -C modules/mali LICHEE_MOD_DIR=${LICHEE_MOD_DIR} LICHEE_KDIR=${LICHEE_KDIR} \
 		CONFIG_CHIP_ID=${CONFIG_CHIP_ID} install
 	)
 	
@@ -186,10 +186,10 @@ kernel)
 modules)
 	build_modules
 	;;
-clean)
-	clean_kernel
-	clean_modules
-	;;
+# clean)
+#	clean_kernel
+#	clean_modules
+#	;;
 all)
 	build_kernel
 	build_modules
