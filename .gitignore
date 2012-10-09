@@ -100,3 +100,5 @@ drivers/gpu/mali/mali/__malidrv_build_info.c
 log.txt
 boot-repack
 comet.sh
+boot-repack2
+comet2.sh
